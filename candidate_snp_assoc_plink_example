@@ -1,0 +1,22 @@
+# Basic usage
+bash candidate_snp_assoc.sh \
+    -s snp_list.txt \
+    -g /path/to/genotypes \
+    -p phenotype.txt \
+    -c covariates.txt \
+    -o kidney_analysis
+
+# Full options
+bash candidate_snp_assoc.sh \
+    -s snp_list.txt \
+    -g /path/to/genotypes \
+    -p phenotype.txt \
+    -c covariates.txt \
+    -o kidney_analysis \
+    -d /output/directory \
+    -b hg19 \
+    -m additive,recessive,dominant \
+    --pheno-name eGFR \
+    --pheno-col eGFR_normalized \
+    --covar-names AGE,SEX,BMI \
+    --n-pcs 10
